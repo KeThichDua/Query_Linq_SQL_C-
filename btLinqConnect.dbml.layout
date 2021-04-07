@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="btLinqConnect">
+  <DataContextMoniker Name="/btLinqConnectDataContext" />
+  <nestedChildShapes>
+    <classShape Id="335821d2-b0c6-4052-8385-2d212331a9d2" absoluteBounds="0.75, 1, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/btLinqConnectDataContext/class1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1bda270c-499c-4e26-9c9b-72c162f9fdfd" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="53456fb3-2d5f-4db1-8502-14c49c440fd3" absoluteBounds="3.5, 0.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/btLinqConnectDataContext/student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b851269-4a9e-4d93-bd3b-d4cc276e77e1" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.59699625651042); (3.5 : 1.59699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/btLinqConnectDataContext/class1/class_student" />
+      <nodes>
+        <classShapeMoniker Id="335821d2-b0c6-4052-8385-2d212331a9d2" />
+        <classShapeMoniker Id="53456fb3-2d5f-4db1-8502-14c49c440fd3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

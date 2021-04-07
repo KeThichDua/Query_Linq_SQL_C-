@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="btLinq" Class="btLinqConnectDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMINISTRATOR\SQLEXPRESS;Initial Catalog=btLinq;Integrated Security=True" SettingsObjectName="btLinq.Properties.Settings" SettingsPropertyName="btLinqConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.class" Member="class1s">
+    <Type Name="class1">
+      <Column Name="Id" Member="Idc" Storage="_Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="class_student" Member="students" ThisKey="Idc" OtherKey="classId" Type="student" />
+    </Type>
+  </Table>
+  <Table Name="dbo.student" Member="students">
+    <Type Name="student">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="classId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="class_student" Member="class1" Storage="_class" ThisKey="classId" OtherKey="Idc" Type="class1" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+</Database>
